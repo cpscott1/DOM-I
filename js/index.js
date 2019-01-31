@@ -51,6 +51,27 @@ mainNav[3].textContent = siteContent.nav["nav-item-4"];
 mainNav[4].textContent = siteContent.nav["nav-item-5"];
 mainNav[5].textContent = siteContent.nav["nav-item-6"];
 
+const newAnchor1 = document.createElement('a');
+const newAnchor2 = document.createElement('a');
+
+newAnchor1.setAttribute("href", "#");
+newAnchor2.setAttribute("href", "#");
+
+newAnchor1.textContent = "Home";
+newAnchor2.textContent = "Blog";
+
+const newNav = document.querySelector('nav')
+
+newNav.prepend(newAnchor1);
+newNav.append(newAnchor2);
+
+
+mainNav.forEach(function(nav) {
+  nav.style.color = 'green';
+})
+
+
+
 //cta
 
 let h1 = document.querySelector("h1");
