@@ -64,12 +64,35 @@ headerImg.setAttribute('src', siteContent.cta["img-src"])
 
 //main content
 
-let featuresHead = document.querySelectorAll("h4");
-let featuresContent = document.querySelector("p")
+let mainText = document.querySelectorAll(".text-content")
 
-featuresHead.textContent = siteContent["main-content"]["features-h4"];
-featuresContent.textContent = siteContent["main-content"]["features-content"]
+mainText[0].querySelector("h4").textContent = siteContent["main-content"]["features-h4"];
+mainText[0].querySelector("p").textContent = siteContent["main-content"]["features-content"];
+mainText[1].querySelector("h4").textContent = siteContent["main-content"]["about-h4"];
+mainText[1].querySelector("p").textContent = siteContent["main-content"]["about-content"];
+mainText[2].querySelector("h4").textContent = siteContent["main-content"]["services-h4"];
+mainText[2].querySelector("p").textContent = siteContent["main-content"]["services-content"];
+mainText[3].querySelector("h4").textContent = siteContent["main-content"]["product-h4"];
+mainText[3].querySelector("p").textContent = siteContent["main-content"]["product-content"];
+mainText[4].querySelector("h4").textContent = siteContent["main-content"]["vision-h4"];
+mainText[4].querySelector("p").textContent = siteContent["main-content"]["vision-content"];
 
-let aboutContent = document.querySelector("p");
+// middle image
 
-aboutHead.textContent = siteContent["main-content"]["about-h4"];
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// Contact
+
+let contact = document.querySelector(".contact")
+
+contact.querySelector("h4").textContent = siteContent.contact["contact-h4"];
+contact.querySelectorAll("p")[0].textContent = siteContent.contact["address"];
+contact.querySelectorAll("p")[1].textContent = siteContent.contact["phone"];
+contact.querySelectorAll("p")[2].textContent = siteContent.contact["email"]
+
+// footer
+
+let footer = document.querySelector("footer")
+
+footer.querySelector("p").textContent = siteContent.footer["copyright"]
